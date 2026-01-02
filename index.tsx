@@ -1,15 +1,14 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { createRoot } from 'react-dom/client';
 import { 
-  Settings2, Sparkles, Video, 
   Loader2, Download,
-  X, AlertCircle, Plus,
-  Maximize2, Check,
-  Image as ImageIcon, Film,
+  X, AlertCircle,
+  Check,
+  Image as ImageIcon,
   Moon, Sun, Wallet, LogIn,
   ChevronUp, ChevronDown, Wand2,
   Bookmark, Palette, User, Send,
-  Play, Trash2, LayoutGrid, Grid2X2,
+  Trash2, LayoutGrid, Grid2X2,
   RefreshCw, Copy, ImagePlus, Clock
 } from 'lucide-react';
 
@@ -97,19 +96,6 @@ const CHARACTERS: Record<string, Character[]> = {
     { id: 'c5', name: '2dsjzwll', tag: '@2dsjzwll', avatar: 'https://lsky.zhongzhuan.chat/i/2026/01/01/6955fc9a9e618.jpg' },
     { id: 'c6', name: '2dsjzfy', tag: '@2dsjzfy', avatar: 'https://lsky.zhongzhuan.chat/i/2026/01/01/6955fc97ebd72.jpg' },
   ]
-};
-
-const ASPECT_RATIO_LABELS: Record<string, string> = {
-  '1:1': '1:1 (正方形)',
-  '2:3': '2:3 (照片)',
-  '3:2': '3:2 (摄影)',
-  '3:4': '3:4 (小红书)',
-  '4:3': '4:3 (早期电视)',
-  '4:5': '4:5 (详情页)',
-  '5:4': '5:4 (装饰画)',
-  '9:16': '9:16 (短视频)',
-  '16:9': '16:9 (电脑壁纸)',
-  '21:9': '21:9 (宽屏电影)',
 };
 
 const EXTENDED_RATIOS = ['1:1', '2:3', '3:2', '3:4', '4:3', '4:5', '5:4', '9:16', '16:9', '21:9'];
@@ -400,15 +386,6 @@ const getAllAssetsFromDB = async (): Promise<GeneratedAsset[]> => {
       request.onerror = () => reject(request.error);
     });
   } catch(e) { return []; }
-};
-
-const deleteAssetFromDB = async (id: string) => {
-  try {
-    const db = await initDB();
-    const transaction = db.transaction([STORE_NAME], 'readwrite');
-    const store = transaction.objectStore(STORE_NAME);
-    store.delete(id);
-  } catch(e) { console.error("DB Delete Error", e); }
 };
 
 // --- Components ---
