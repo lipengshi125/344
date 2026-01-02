@@ -79,7 +79,7 @@ const FIXED_BASE_URL = 'https://www.mxhdai.top';
 const CHARACTERS: Record<string, Character[]> = {
   'hot': [
     { id: 'h1', name: 'ybm341', tag: '@ybm341 ', avatar: 'https://lsky.zhongzhuan.chat/i/2026/01/01/695632e96a640.png' },
-    { id: 'h2', name: 'laoda34', tag: '@穿着黄色篮球服的篮球运动员科比 ', avatar: 'https://lsky.zhongzhuan.chat/i/2026/01/01/695632d59a8a9.png' },
+    { id: 'h2', name: 'laoda34', tag: '@科比（真人）本人和原声音 ', avatar: 'https://lsky.zhongzhuan.chat/i/2026/01/01/695632d59a8a9.png' },
   ],
   'peace': [
     { id: 'p1', name: '2dhpxfq34', tag: '@2dhpxfq34', avatar: 'https://lsky.zhongzhuan.chat/i/2026/01/01/6955faf4ea75c.jpg' },
